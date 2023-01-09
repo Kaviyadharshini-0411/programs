@@ -1,0 +1,76 @@
+body{
+    
+    background: linear-gradient(144deg, rgba(2,0,36,1) 0%, rgba(9,115,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+.circle{
+    display:inline-block;
+    height: 450px;
+    width: 450px;
+    background-color: hsl(294, 75%, 61%);
+    border-radius: 50%;
+    position: relative;
+    translate: 500px 200px;
+    display:inline-block;
+    border: 5px solid black;
+    box-shadow: inset 0px 0px 5px 1px hsl(294, 75%, 61%); ;
+
+}
+
+.small{
+    height: 20px;
+    width: 20px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    left:50%;
+    bottom:50%;
+    display:inline-block;
+    z-index: 1;
+    translate: -50% 50%;
+    
+}
+
+.hour{
+    display:inline-block;
+    height: 70px;
+    width: 8px;
+    background-color: black;
+    position: absolute;
+    right:50%;
+    bottom:50%;
+    animation: hour 43200s linear 0s infinite;
+    transform-origin: center bottom;
+   
+}
+
+.min{
+    display:inline-block;
+    height: 100px;
+    width: 5px;
+    background-color: pink;
+    position: absolute;
+    left:50%;
+    bottom:50%;
+    animation: hour 3600s linear 0s infinite;
+    transform-origin:  bottom;
+}
+
+.sec{
+    display:inline-block;
+    height: 150px;
+    width: 3px;
+    background-color: grey;
+    position: absolute;
+    left:50%;
+    bottom:50%;
+    animation: hour 60s linear 0s infinite;
+    transform-origin: center bottom;
+}
+@keyframes hour{
+    from{
+        rotate: 0deg;
+    }
+    to{
+        rotate: 360deg;
+    }
+}
